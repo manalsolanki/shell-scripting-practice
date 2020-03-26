@@ -66,7 +66,10 @@ case $option in
     fi
     ;;
 # If the selection does not match a support operation, display an error message.
-    
+    *)
+      echo "------------------------"
+      echo "Please select a appropriate choice"
+    ;;
 esac
 
 # When the operation is complete, redisplay the menu.
