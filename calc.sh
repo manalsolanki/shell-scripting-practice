@@ -27,9 +27,7 @@ echo "3.Multiply"
 echo "4.Divide"
 echo "5.Exit"
 
-# Then, capture the user selection.
-
-while true; do
+# Then, capture the user selection
 
   read option
   echo "**********************************"
@@ -79,5 +77,8 @@ while true; do
         echo "Please select a appropriate choice"
       ;;
   esac
-done
-# When the operation is complete, redisplay the menu.
+# When the operation is complete, redisplay the menu
+
+# If the selection matches a supported operation, execute the operation.
+# If the selection does not match a support operation, display an error message.
+# When the operation is complete, redisplay the menu
