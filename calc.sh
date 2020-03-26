@@ -19,7 +19,7 @@ echo $greeting
   # Add
   # Subtract
   # Exit
-
+  
 echo "Please select the following number for appropriate operation."
 echo "1.Add"
 echo "2.Subtract"
@@ -27,15 +27,17 @@ echo "3.Multiply"
 echo "4.Divide"
 echo "5.Exit"
 
-# Then, capture the user selection.
-
-while true; do
-
+# When the operation is complete, redisplay the menu.
+while true;do
+  # Then, capture the user selection.
   read option
   echo "**********************************"
-  echo "Enter Two numbers "
-  read num_1
-  read num_2
+  if [[ $option -lt 5 ]]; then 
+    echo "Enter Two numbers "
+    read num_1
+    read num_2
+  fi
+  
   # If the selection matches a supported operation, execute the operation.
 
 
@@ -80,4 +82,3 @@ while true; do
       ;;
   esac
 done
-# When the operation is complete, redisplay the menu.
