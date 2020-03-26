@@ -19,7 +19,7 @@ echo $greeting
   # Add
   # Subtract
   # Exit
-  
+
 echo "Please select the following number for appropriate operation."
 echo "1.Add"
 echo "2.Subtract"
@@ -38,6 +38,13 @@ while true;do
     read num_2
   fi
   
+# Then, capture the user selection
+
+  read option
+  echo "**********************************"
+  echo "Enter Two numbers "
+  read num_1
+  read num_2
   # If the selection matches a supported operation, execute the operation.
 
 
@@ -82,3 +89,9 @@ while true;do
       ;;
   esac
 done
+
+# When the operation is complete, redisplay the menu
+
+# If the selection matches a supported operation, execute the operation.
+# If the selection does not match a support operation, display an error message.
+# When the operation is complete, redisplay the menu
