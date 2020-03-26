@@ -1,6 +1,20 @@
 #! /usr/bin/env bash
 
 # When the program is first loaded, display a greeting to the user.
+
+hour=$(date +"%H")
+if [ $hour -ge 0 -a $hour -lt 12 ]
+  then
+    greeting="Good Morning , Welcome to the calculator program."
+elif [ $hour -ge 12 -a $hour -lt 18 ] 
+  then
+    greeting="Good Afternoon, Welcome to the calculator program."
+else 
+    greeting="Good evening,Welcome to the calculator program."
+fi
+
+echo $greeting
+
 # Then, display a menu that outlines the possible operations:
   # Add
   # Subtract
