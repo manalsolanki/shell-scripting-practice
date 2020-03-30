@@ -14,40 +14,31 @@ else
 fi
 
 echo $greeting
-
 # Then, display a menu that outlines the possible operations:
   # Add
   # Subtract
   # Exit
-
-echo "Please select the following number for appropriate operation."
-echo "1.Add"
-echo "2.Subtract"
-echo "3.Multiply"
-echo "4.Divide"
-echo "5.Exit"
-
 # When the operation is complete, redisplay the menu.
+
 while true;do
   # Then, capture the user selection.
+  echo "Please select the following number for appropriate operation."
+  echo "1.Add"
+  echo "2.Subtract"
+  echo "3.Multiply"
+  echo "4.Divide"
+  echo "5.Exit"
+  echo "**-**-**-**-**-**-**-**-**-**-**-**"
+  # Then, capture the user selection
   read option
-  echo "**********************************"
   if [[ $option -lt 5 ]]; then 
+    echo "------------------------"
     echo "Enter Two numbers "
     read num_1
     read num_2
   fi
-  
-# Then, capture the user selection
 
-  read option
-  echo "**********************************"
-  echo "Enter Two numbers "
-  read num_1
-  read num_2
   # If the selection matches a supported operation, execute the operation.
-
-
   case $option in 
       1 )
         echo "------------------------"
@@ -69,7 +60,7 @@ while true;do
 
       4 )
         echo "------------------------"
-        if [[ $num_2 -eq 0 ]]; then
+        if [[ $num_2 -eq 0 ]] ; then
         echo  "Division not possible because denominator is 0"
         else
         echo "Division of $num_1 and $num_2 is"
@@ -86,12 +77,7 @@ while true;do
       * )
         echo "------------------------"
         echo "Please select a appropriate choice"
+        echo "------------------------"
       ;;
   esac
 done
-
-# When the operation is complete, redisplay the menu
-
-# If the selection matches a supported operation, execute the operation.
-# If the selection does not match a support operation, display an error message.
-# When the operation is complete, redisplay the menu
